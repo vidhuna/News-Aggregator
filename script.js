@@ -19,24 +19,24 @@ fetch("https://newsdata.io/api/1/latest?apikey=pub_71a8fea42bce47138772756ebcdae
   });
   const searchInput = document.querySelector('input');
 
-searchInput.addEventListener('keyup', () => {
-    const searchText = searchInput.value.toLowerCase();
+//searchInput.addEventListener('keyup', () => {
+   // const searchText = searchInput.value.toLowerCase();
 
-    const card = document.querySelector('.card');
+    //const card = document.querySelector('.card');
 
-    if (card.innerText.toLowerCase().includes(searchText)) {
-        card.style.display = "block";
-    } else {
-        card.style.display = "none";
-    }
-});
+    //if (card.innerText.toLowerCase().includes(searchText)) {
+      //  card.style.display = "block";
+    //} else {
+      //  card.style.display = "none";
+    //}
+//});
 
 searchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
 
     const query = searchInput.value;
 
-    fetch(`https://newsdata.io/api/1/latest?apikey=pub_71a8fea42bce47138772756ebcdaea12&q=${query}&language=en,ta`)
+   fetch(`https://newsdata.io/api/1/latest?apikey=pub_71a8fea42bce47138772756ebcdaea12&q=${query}&language=en,ta`)
       .then(response => response.json())
       .then(data => {
 
